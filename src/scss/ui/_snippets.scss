@@ -1,0 +1,51 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.snippets{
+    padding-top:13rem;
+
+    &__grid{
+        margin-top: 8rem;
+        display: flex;
+        flex-direction: column;
+        @include m.tablet { 
+        flex-direction: row;
+        gap: 16rem
+        }
+        @include m.tablet { 
+        margin-top: 12rem;
+        }
+    }
+
+    &__imagen{
+        @include m.tablet { 
+            width: 50%;
+            margin-left: -2rem;
+            transform: scale(1.05); 
+        }
+    }
+
+    &__contenido{
+        margin-top: 5rem;
+    }
+}
+
+
+.snippet{
+    margin-bottom: 4rem;
+    text-align:center;
+
+    @include m.tablet { 
+        text-align: left;
+        margin-bottom: 7rem;
+    }
+    &__heading{
+        margin-bottom: 1rem;
+    }
+    &__texto{
+        max-width: 38rem;
+        line-height: 2;
+        margin-top: 0;
+        margin: 0 auto;
+    }
+}

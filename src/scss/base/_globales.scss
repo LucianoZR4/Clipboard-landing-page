@@ -1,0 +1,47 @@
+@use 'variables' as v;
+@use 'base/mixins' as m;
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: v.$fuentePrincipal;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.container{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: v.$primario;
+}
+
+
+
+[class*="__descripcion"]{
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.container{
+    max-width: 90%;
+    @include m.tablet { 
+    min-width: 100%;
+    }
+}

@@ -1,0 +1,68 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header{
+    background-image: url(../img/bg-header-mobile.png);
+    background-size: cover;
+    background-position:center center;
+    text-align: center;
+
+    @include m.tablet { 
+        background-image: url(../img/bg-header-desktop.png);
+    }
+    
+    &__contenido{
+        padding-top: 9rem;
+    }
+
+    &__logo{
+        margin: 0 auto;
+        width: 15rem;
+       
+        @include m.tablet { 
+            width: 10rem;
+        }
+    }
+
+    &__heading{
+        color: v.$primario;
+        font-size: 3.5rem;
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+        @include m.tablet { 
+            font-size: 5rem;
+        }
+    }
+
+    &__descripcion{
+        font-size: 2.2rem;
+    }
+
+    &__flex{
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include m.tablet { 
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+    &__ios{
+        @include m.boton(v.$verde, v.$blanco);
+        margin-block:2rem;
+        @include m.tablet { 
+            width: auto;
+            margin-block: 0;
+        }
+    }
+
+    &__mac{
+        @include m.boton(v.$azul, v.$blanco);
+        @include m.tablet { 
+            width: auto;
+        }
+    }
+    
+}
